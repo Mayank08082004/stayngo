@@ -22,16 +22,20 @@ const Navbar = ({ userRole }) => {
 
         {/* Login and Register Buttons */}
         <div className="text-white flex space-x-2">
-          <Link to="/login">
-            <button className="bg-white text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100">
-              Login
-            </button>
-          </Link>
-          <Link to="/register">
-            <button className="bg-white text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100">
-              Register
-            </button>
-          </Link>
+          {!userRole && (
+            <>
+              <Link to="/login">
+                <button className="bg-white text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="bg-white text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100">
+                  Register
+                </button>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </nav>
