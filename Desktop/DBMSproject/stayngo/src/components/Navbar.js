@@ -1,5 +1,6 @@
 // src/components/Navbar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -10,10 +11,12 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-4 text-white">
-          <a href="#" className="hover:text-blue-200">Home</a>
-          <a href="#" className="hover:text-blue-200">Search</a>
-          <a href="#" className="hover:text-blue-200">Listings</a>
-          <a href="#" className="hover:text-blue-200">Contact</a>
+          <Link to="/" className="hover:text-blue-200">Home</Link>
+          <Link to="/search" className="hover:text-blue-200">Search</Link>
+          <Link to="/listings" className="hover:text-blue-200">Listings</Link>
+          <Link to="/contact" className="hover:text-blue-200">Contact</Link>
+          <Link to="/admin" className="hover:text-blue-200">Admin Dashboard</Link>
+          <Link to="/account" className="hover:text-blue-200">User Account</Link>
         </div>
 
         {/* Login/Signup Button */}
